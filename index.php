@@ -18,22 +18,22 @@ if  ( $image_count )
     }
 }
 $im = imagecreatefromjpeg('pdf/test.jpg');
-$im2 = imagecrop($im, ['x' => 20, 'y' => 75, 'width' => 295, 'height' => 295]);
-if ($im2 !== FALSE) {
-    imagepng($im2, 'logo.png');
-    imagedestroy($im2);
+$imLogo = imagecrop($im, ['x' => 20, 'y' => 75, 'width' => 295, 'height' => 295]);
+if ($imLogo !== FALSE) {
+    imagepng($imLogo, 'logo.png');
+    imagedestroy($imLogo);
 }
-$im = imagecreatefromjpeg('pdf/test.jpg');
-$im2 = imagecrop($im, ['x' => 640, 'y' => 70, 'width' => 400, 'height' => 370]);
-if ($im2 !== FALSE) {
-    imagepng($im2, 'island.png');
-    imagedestroy($im2);
+
+$imIsland = imagecrop($im, ['x' => 640, 'y' => 70, 'width' => 400, 'height' => 370]);
+if ($imIsland !== FALSE) {
+    imagepng($imIsland, 'island.png');
+    imagedestroy($imIsland);
 }
-$im = imagecreatefromjpeg('pdf/test.jpg');
-$im2 = imagecrop($im, ['x' => 1325, 'y' => 150, 'width' => 654, 'height' => 125]);
-if ($im2 !== FALSE) {
-    imagepng($im2, 'header.png');
-    imagedestroy($im2);
+
+$imHeader = imagecrop($im, ['x' => 1325, 'y' => 150, 'width' => 654, 'height' => 125]);
+if ($imHeader !== FALSE) {
+    imagepng($imHeader, 'header.png');
+    imagedestroy($imHeader);
 }
 
 echo 'all was done.';
