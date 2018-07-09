@@ -24,7 +24,7 @@ if ($im2 !== FALSE) {
     imagedestroy($im2);
 }
 $im = imagecreatefromjpeg('pdf/test.jpg');
-$im2 = imagecrop($im, ['x' => 640, 'y' => 70, 'width' => 400, 'height' => 375]);
+$im2 = imagecrop($im, ['x' => 640, 'y' => 70, 'width' => 400, 'height' => 370]);
 if ($im2 !== FALSE) {
     imagepng($im2, 'island.png');
     imagedestroy($im2);
